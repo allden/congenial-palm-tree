@@ -20,5 +20,8 @@ router.get('/logout', ensureAuth, userController.logOut);
 router.get('/member', ensureAuth, userController.member);
 router.post('/member', ensureAuth, userController.postMember);
 router.get('/', ensureAuth, msgController.dashboard);
+router.get('*', (req, res) => {
+    res.render('404');
+});
 
 module.exports = router;

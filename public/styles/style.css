@@ -153,10 +153,12 @@ input, textarea {
 
 input:focus, textarea:focus {
     border: 1px solid var(--tertiary-color);
+    outline: 0;
 }
 
 input:hover, textarea:hover {
     border: 1px solid var(--tertiary-color);
+    outline: 0;
 }
 
 a {
