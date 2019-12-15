@@ -1,0 +1,9 @@
+<div class="container p-1 b-rad">
+    <%- include('./partials/messages') %>
+    <form class="flex-cols" action="/member" method="POST">
+        <label class="center-text" for="secret">Secret</label>
+        <input type="text" name="secret" id="secret" placeholder="For admin privileges type &quot;admin&quot; for membership type &quot;member&quot;, or if you want to remove all privileges type &quot;remove&quot;">
+        <button class="btn hr-pad-1">Apply</button>
+    </form>
+    <a class="center-text" href="/">Go Back</a>
+</div>

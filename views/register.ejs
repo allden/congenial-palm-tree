@@ -1,0 +1,17 @@
+<div class="container b-rad p-1">
+    <%- include('./partials/messages') %>
+    <form class="flex-cols" action="/register" method="POST">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="First name: ex. John">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Last name: ex. Doe">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Please enter your email: ex. john.doe@gmail.com">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password must be at least 5 characters long">
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" name="password2" placeholder="Please re-enter your password">
+        <button class="btn hr-pad-1">Submit</button>
+    </form>
+    <a class="center-text" href="/login">Already signed up?</a>
+</div>

@@ -1,0 +1,29 @@
+<nav>
+    <h1 style="margin-left: 1rem;">Hello, <span class="tertiary"><%= user.fullName %></span></h1>
+    <ul class="form-menu">
+        <li><a class="nav-btn" href="/member">Become a Member</a></li>
+        <li><a class="nav-btn" href="/logout">Log Out</a></li>
+    </ul>
+</nav>
+<div class="container b-rad p-1 message-container">
+    <%- include('./partials/messages'); %>
+    <a class="center-text" href="/message/create">Create a message</a>
+    <% if(messages.length === 0) { %>
+        <p>No messages to display at the moment. Would you like to <a href="/message/create">create one?</a></p>
+    <% } else { %>
+        <% messages.forEach(function(message) { %>
+            <div class="mb-1">
+                <div class="heading row-space-between">
+                    <h2><%= message.title %></h2>
+                    <p class="faded"><span class="tertiary"><%= user.member || user.admin ? message.user.fullName : 'Anonymous'%></span> at <%= message.formatTime %></p>
+                </div>
+                <p><span class="tertiary">>></span> <%= message.content %></p>
+                <% if(user.admin) { %>
+                    <form class="flex-cols" method="POST" action="<%=message.deleteUrl%>">
+                        <button class="btn hr-pad-1">Delete</button>
+                    </form>
+                <% } %>
+            </div>
+        <% }) %>
+    <% } %>
+</div>

@@ -1,0 +1,13 @@
+<% if(errorMsg) { %>
+    <% for(let i = 0; i < errorMsg.length; i++) { %>
+        <div class="center-text err hr-pad-1 mb-1 b-rad"><%=errorMsg[i]%><div class="close">&times;</div></div>
+        <% console.log(errorMsg) %>
+    <% }%>
+<% } %>
+
+<% if(successMsg) { %>
+    <% for(let i = 0; i < successMsg.length; i++) { %>
+        <div class="center-text success hr-pad-1 mb-1 b-rad"><%=successMsg%><div class="close">&times;</div></div>
+        <% console.log(successMsg) %>
+    <% }%>
+<% } %>

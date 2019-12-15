@@ -1,0 +1,11 @@
+<div class="container b-rad p-1">
+    <%- include('./partials/messages') %>
+    <form class="flex-cols" action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Please enter your email: ex. john.doe@gmail.com">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Please enter your password.">
+        <button class="btn hr-pad-1">Submit</button>
+    </form>
+    <a class="center-text" href="/register">Don't have an account?</a>
+</div>
